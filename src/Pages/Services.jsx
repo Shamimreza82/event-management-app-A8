@@ -3,7 +3,9 @@ import React from 'react';
 const Services = () => {
     return (
         <div>
-            services
+            <div className='min-h-screen'>
+                <h1>Services</h1>
+            </div>
         </div>
     );
 };
