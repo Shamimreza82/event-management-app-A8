@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Event Management and Planning",
+        "image": "https://i.ibb.co/PCY2V0S/Event-Management-and-Planning.jpg",
+        "price": "$5,000",
+        "short_description": "Comprehensive event planning and management services."
+    },
+    {
+        "id": "2",
+        "name": "Venue and Space Management",
+        "image": "https://i.ibb.co/pnTbCTg/Venue-and-Space-Management.jpg",
+        "price": "$2,500",
+        "short_description": "Efficient space utilization and venue selection services."
+    },
+    {
+        "id": "3",
+        "name": "Audiovisual and Technology Support",
+        "image": "https://i.ibb.co/c8zkLSW/Audiovisual-and-Technology-Support.jpg",
+        "price": "$3,500",
+        "short_description": "Professional AV and technical support for presentations."
+    },
+    {
+        "id": "4",
+        "name": "Exhibitor Services",
+        "image": "https://i.ibb.co/0YL03YG/Exhibitor-Services.jpg",
+        "price": "$2,000",
+        "short_description": "Booth design and lead retrieval systems for exhibitors."
+    },
+    {
+        "id": "5",
+        "name": "Registration and Badge Services",
+        "image": "https://i.ibb.co/VwxqNj9/Registration-and-Badge-Services.jpg",
+        "price": "$1,000",
+        "short_description": "Online registration and badge printing solutions."
+    },
+    {
+        "id": "6",
+        "name": "Networking and Engagement Tools",
+        "image": "https://i.ibb.co/Ns74kZf/best-user-engagement-tools.jpg",
+        "price": "$1,500",
+        "short_description": "Mobile event apps and interactive engagement tools."
+    }
+]
