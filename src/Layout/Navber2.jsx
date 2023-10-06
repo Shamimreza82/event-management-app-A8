@@ -12,6 +12,7 @@ const Navber2 = () => {
           aria-label="Company"
           title="Company"
           className="inline-flex items-center"
+          data-aos="fade-right"
         >
           <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
             Tech Conferences and Expos

@@ -2,42 +2,42 @@
     {
         "id": "1",
         "name": "Event Management and Planning",
-        "image": "https://i.ibb.co/PCY2V0S/Event-Management-and-Planning.jpg",
+        "image": "event_management.png",
         "price": "$5,000",
         "short_description": "Our Event Management and Planning service offers comprehensive event planning and management solutions. We handle all aspects of your event, from initial concept development to seamless execution. Our team of experienced professionals will ensure that your event runs smoothly, within budget, and exceeds your expectations. With attention to detail and creative expertise, we turn your vision into reality, creating unforgettable experiences for your attendees."
     },
     {
         "id": "2",
         "name": "Venue and Space Management",
-        "image": "https://i.ibb.co/pnTbCTg/Venue-and-Space-Management.jpg",
+        "image": "venue_management.png",
         "price": "$2,500",
         "short_description": "Efficiently utilize space and select the perfect venue with our Venue and Space Management service. We specialize in optimizing booth placement, signage, and attendee flow within your chosen venue. Our experts ensure that your event space is utilized to its full potential, providing a memorable and comfortable experience for attendees."
     },
     {
         "id": "3",
         "name": "Audiovisual and Technology Support",
-        "image": "https://i.ibb.co/c8zkLSW/Audiovisual-and-Technology-Support.jpg",
+        "image": "audiovisual_support.png",
         "price": "$3,500",
         "short_description": "Experience professional Audiovisual and Technology Support for your event. We provide top-notch sound systems, lighting, projection, and technical equipment to enhance presentations and entertainment. Our technical experts are on hand to troubleshoot any issues, ensuring a flawless experience for your speakers and audience."
     },
     {
         "id": "4",
         "name": "Exhibitor Services",
-        "image": "https://i.ibb.co/0YL03YG/Exhibitor-Services.jpg",
+        "image": "exhibitor_services.png",
         "price": "$2,000",
         "short_description": "Our Exhibitor Services are designed to empower your exhibitors with effective booth design and lead retrieval systems. We help exhibitors make a lasting impression on attendees while providing the tools needed to collect valuable leads and connections during the event."
     },
     {
         "id": "5",
         "name": "Registration and Badge Services",
-        "image": "https://i.ibb.co/VwxqNj9/Registration-and-Badge-Services.jpg",
+        "image": "registration_services.png",
         "price": "$1,000",
         "short_description": "Streamline your event's check-in process with our Registration and Badge Services. We offer online registration and badge printing solutions, making it easy for attendees to check in and access your event. Ensure a hassle-free experience from the moment attendees arrive."
     },
     {
         "id": "6",
         "name": "Networking and Engagement Tools",
-        "image": "https://i.ibb.co/Ns74kZf/best-user-engagement-tools.jpg",
+        "image": "networking_tools.png",
         "price": "$1,500",
         "short_description": "Enhance attendee engagement with our Networking and Engagement Tools. Our mobile event apps facilitate networking, scheduling, and communication, while interactive engagement tools like audience polling and live chats keep attendees connected and engaged throughout your event."
     }
