@@ -6,7 +6,7 @@ import Services from '../Pages/Services';
 const MainLayout = () => {
     return (
         <div>
-            <div >
+            <div className='font-roboto'>
                 <Navber2></Navber2>
                 <Outlet></Outlet>
                 <Footer></Footer>

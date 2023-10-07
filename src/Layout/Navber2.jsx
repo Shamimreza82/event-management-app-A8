@@ -5,7 +5,7 @@ const Navber2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="py-4 bg-slate-900 lg:px-10 font-roboto">
+    <div className="py-4 bg-slate-900 lg:px-6 font-roboto">
       <div className="relative flex items-center justify-between">
         <a
           href="/"
@@ -22,7 +22,7 @@ const Navber2 = () => {
           <NavLink
             to="/"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733]" : "text-green-50"
+              isPending ? "pending" : isActive ? "text-[#91c733]  " : "text-green-50 hover:outline  hover:rounded-md "
             }
           >
             Home
@@ -30,7 +30,7 @@ const Navber2 = () => {
           <NavLink
             to="/services"
             className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#91c733]" : "text-green-50"
+            isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline hover:rounded-md "
             }
           >
             Services
@@ -38,12 +38,20 @@ const Navber2 = () => {
           <NavLink
             to="/about"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733]" : "text-green-50 "
+              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
             }
           >
             About Us
           </NavLink>
-          <Link to='/login' className="btn bg-[#91c733] border-none py-1"> Login</Link>
+          <NavLink
+            to="/ourTeam"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
+            }
+          >
+            Our Team
+          </NavLink>
+          <Link to='/login' className="btn bg-[#91c733] border-none py-1 hover:text-green-700"> Login</Link>
         </ul>
 
 
@@ -73,7 +81,7 @@ const Navber2 = () => {
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full z-20">
-              <div className="p-5 bg-green-300 border rounded shadow-sm">
+              <div className="p-5 bg-[#91c733] border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <a
@@ -120,7 +128,7 @@ const Navber2 = () => {
                         to='/services'
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-slate-300"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
                       >
                         Services
                       </Link>
@@ -136,19 +144,19 @@ const Navber2 = () => {
                       </a>
                     </li>
                     <li>
-                      <button
-                        href="/"
+                      <Link
+                        to="/login"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 btn"
                       >
                         Login
-                      </button>
+                      </Link>
                     </li>
                     <li>
                       <Link
                         to='/register'
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none border"
+                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none border "
                         aria-label="Sign up"
                         title="Sign up"
                       >

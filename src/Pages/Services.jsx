@@ -8,7 +8,7 @@ const Services = () => {
     console.log(cards);
 
     return (
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto mt-3'>
             <div className='min-h-screen'>
                 <h1 className='text-center text-2xl lg:text-3xl font-bold lg:pt-10 flex justify-center'>Our Services</h1>
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:gap-5 gap-1 '>

@@ -7,7 +7,8 @@ const Service = ({ card }) => {
     const cutText = textShort.slice(0, 120)
     console.log(cutText);
   return (
-    <div className="relative flex flex-col rounded-xl h-[400px] bg-white bg-clip-border text-gray-700 shadow-md my-5 hover:bg-[#dceebd]">
+    <>
+     <div className="relative flex flex-col rounded-xl h-[400px] bg-white bg-clip-border text-gray-700 shadow-md my-5 hover:bg-slate-100" data-aos="zoom-in-left">
       <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
         <img
           src={image}
@@ -31,6 +32,8 @@ const Service = ({ card }) => {
       <Link to={`/serviceDetailes/${id}`} className="btn bg-[#91c733] border-none py-1 text-white"> details</Link>
       </div>
     </div>
+    </>
+   
   );
 };
 
