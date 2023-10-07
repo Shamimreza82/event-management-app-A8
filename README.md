@@ -1,8 +1,10 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live LInk: 
 
-Currently, two official plugins are available:
+## Some important features of the site. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*The site is very well responsive which will add a unique dimension to the user.
+*This site has added login and registration(Password validation feature has been added here) features which are managed through Firebase.
+*The site has a total of three private routes is Blog, Tech News and service details. 
+*Some more features like(Animation(AOS), banner slider, Upon successful login or registration tost)
+*Google authentication is used for login. 
