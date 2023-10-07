@@ -1,22 +1,39 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import swal from 'sweetalert';
 
 const Register = () => {
-
-  const {createUser} = useContext(AuthContext)
+  const {createUser, handleUpdateProfile} = useContext(AuthContext)
+  const [error, setError] = useState('');
+  const navegate = useNavigate()
 
     const handleSineUp = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
+        const photoUrl = e.target.photourl.value;
         const email = e.target.email.value; 
         const password = e.target.password.value; 
         console.log(name, email, password);
+        setError('')
+
+        if(password.length < 6){
+          setError('Password must be at least 6 characters long') 
+        } else if(!/[!@#\$%\^&\*_]/.test(password)){
+          setError('"Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]"')
+        } else if(!/[A-Z]/.test(password)){
+          setError('"Your password must contain at least one uppercase letter"')
+        } 
 
 
         createUser(email, password)
         .then(result => {
           console.log(result.user);
+          handleUpdateProfile(name, photoUrl)
+          .then(()=> {
+            swal("User Crate Successfully")
+            navegate('/')
+          })
         })
         .catch(error => console.error(error))
        }
@@ -36,7 +53,15 @@ const Register = () => {
 
                   </span>
   
-                  <input type="text" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-3 dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" name="name"/>
+                  <input type="text" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-3 dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Name" name="name"/>
+              </div>
+              <div className="relative  items-center mt-4">
+              <label>Photo URL</label>
+                  <span className="absolute">
+
+                  </span>
+  
+                  <input type="text" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-3 dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Photo URL" name="photourl"/>
               </div>
               <div className="relativeitems-center mt-4">
               <label>Email</label>
@@ -44,7 +69,7 @@ const Register = () => {
 
                   </span>
   
-                  <input type="email" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-3 dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" name="email"/>
+                  <input type="email" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-3 dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" name="email" required/>
               </div>
   
               <div className="relative items-center mt-4">
@@ -53,7 +78,7 @@ const Register = () => {
 
                   </span>
   
-                  <input type="password" className="block w-full px-3 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" name="password"/>
+                  <input type="password" className="block w-full px-3 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" name="password" required/>
               </div>
               <button className=" mt-6 w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" type="submit">
                       Sine Up
@@ -61,7 +86,7 @@ const Register = () => {
               </form>
   
               <div className="mt-6">
-                  
+                  <p className='text-red-600'>{error}</p>
                   <p className="mt-4 text-center text-gray-600 dark:text-gray-400">or sign in with</p>
   
                   <a href="#" className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700  hover:bg-gray-50 dark:hover:bg-green-300">

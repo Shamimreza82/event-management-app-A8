@@ -64,8 +64,8 @@ const Navber2 = () => {
             Our Team
           </NavLink>
           {
-            user ? <div className="flex gap-2">
-            <img className="rounded-full h-[50px]" src={user.photoURL} alt="" />
+            user ? <div className="flex gap-2 items-center">
+            <img className="rounded-full h-[45px] border-2 border-[#91c733]" src={user.photoURL} alt="" />
             <Link onClick={handleLogout} to='/login' className="btn bg-[#91c733] border-none py-1 hover:text-green-700"> Logout</Link>
             </div> : 
             <Link to='/login' className="btn bg-[#91c733] border-none py-1 hover:text-green-700"> Login</Link> 
