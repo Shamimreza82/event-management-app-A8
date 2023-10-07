@@ -631,7 +631,7 @@ const About = () => {
                 <p className="text-body-color mb-12 text-base">
                 <strong>Customized Solutions:</strong> Recognizing that no two tech events are identical, we work closely with you to tailor every facet of your conference or expo, from content curation to logistical precision, aligning every detail with your unique goals.
                 </p>
-                <Link to='/login' className="btn bg-[#91c733] border-none py-1 text-white"> Login</Link>
+                <Link to='/login' className="btn bg-[#91c733] border-none py-1 text-white"> More </Link>
               </div>
             </div>
           </div>

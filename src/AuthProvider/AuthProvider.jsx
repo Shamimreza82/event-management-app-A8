@@ -11,17 +11,20 @@ const AuthProvider = ({children}) => {
  
     //Create user 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     // login User
     const loginUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     //google ligin
 
     const googleLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, provider)  
     }
 
@@ -33,6 +36,7 @@ const AuthProvider = ({children}) => {
     // update Profile 
 
     const handleUpdateProfile = (name, photo) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo, 
         })
@@ -42,6 +46,7 @@ const AuthProvider = ({children}) => {
     useEffect (()=> {
         onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
+            setLoading(false)
         })
     }, [])
 
@@ -53,7 +58,8 @@ const AuthProvider = ({children}) => {
         user,
         logOut,  
         googleLogin,
-        handleUpdateProfile 
+        handleUpdateProfile, 
+        loading 
     }
 
     return (

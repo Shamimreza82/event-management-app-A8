@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from 'sweetalert';
 
 const Login = () => {
   const {loginUser, googleLogin} = useContext(AuthContext)
+  const navigate = useNavigate()
+  const location = useLocation() 
+  const [error, setError] = useState('');
+  console.log(location);
+
 
 
    const handlelogin = (e) => {
@@ -12,17 +17,27 @@ const Login = () => {
     const email = e.target.email.value; 
     const password = e.target.password.value; 
     console.log(email, password);
+    setError("")
+
+    if(password.length < 6){
+        setError('Password must be at least 6 characters long') 
+      } else if(!/[!@#\$%\^&\*_]/.test(password)){
+        setError('"Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]"')
+      } else if(!/[A-Z]/.test(password)){
+        setError('"Your password must contain at least one uppercase letter"')
+      } 
+
 
 
     loginUser(email, password)
     .then(result => {
       console.log(result.user);
+      navigate(location?.state ? location.state : '/')
       swal("Login Successfull");
-
     })
     .catch(error => {
       console.error(error)
-      swal("Oops!", "Something went wrong!", "error");
+      swal("You are not Registed User Please Register "); 
     } )
    }
 
@@ -31,12 +46,12 @@ const Login = () => {
     googleLogin()
     .then(result => {
       console.log(result.user);
+      navigate(location?.state ? location.state : '/')
       swal("Login Successfull");
 
     })
     .catch(error => {
       console.error(error)
-      swal("Oops!", "Something went wrong!", "error");
     } )
    }
 
@@ -67,6 +82,7 @@ const Login = () => {
 
                 <input type="password" className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-100  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" name="password"/>
             </div>
+            <p className="mt-3 text-red-600 font-roboto font-bold">{error}</p>
             <button className=" mt-6 w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" type="submit">
                     Sign in
                 </button>

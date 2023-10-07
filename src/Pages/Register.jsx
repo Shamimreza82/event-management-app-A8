@@ -31,11 +31,14 @@ const Register = () => {
           console.log(result.user);
           handleUpdateProfile(name, photoUrl)
           .then(()=> {
-            swal("User Crate Successfully")
-            navegate('/')
+            swal("Register Successfully")
+            navegate('/login')
           })
         })
-        .catch(error => console.error(error))
+        .catch(error =>{
+          console.error(error)
+          setError("Email Already used")
+        })
        }
 
     

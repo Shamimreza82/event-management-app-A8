@@ -1,17 +1,18 @@
 import React, { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navber2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const {user, logOut} = useContext(AuthContext)
+  const navigate = useNavigate()
 
   console.log(user);
 
   const handleLogout = () => {
     logOut()
     .then(()=> {
-
+      navigate('/')
     })
     .catch(error => console.error(error))
   }
@@ -63,6 +64,27 @@ const Navber2 = () => {
           >
             Our Team
           </NavLink>
+          {
+            user && <NavLink
+            to="/blog"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
+            }
+          >
+            Blog
+          </NavLink>
+          }
+          
+          {
+            user && <NavLink
+            to="/techNews"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
+            }
+          >
+            Tech News
+          </NavLink>
+          }
           {
             user ? <div className="flex gap-2 items-center">
             <img className="rounded-full h-[45px] border-2 border-[#91c733]" src={user.photoURL} alt="" />

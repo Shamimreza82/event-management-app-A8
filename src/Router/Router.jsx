@@ -8,6 +8,10 @@ import Register from "../Pages/Register";
 import About from "../Pages/About";
 import ServicesDetailes from "../Pages/ServicesDetailes/ServicesDetailes";
 import OurTeam from "../Pages/OurTeam";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Blog from "../Pages/Blog";
+import PrivateRouter2 from "../PrivateRoute/PrivateRouter2";
+import TechNews from "../Pages/TechNews";
 
 const router = createBrowserRouter([
     {
@@ -39,12 +43,26 @@ const router = createBrowserRouter([
         }, 
         {
             path: "/serviceDetailes/:id",
-            element: <ServicesDetailes></ServicesDetailes>,
+            element: <PrivateRoute>
+                <ServicesDetailes></ServicesDetailes>
+            </PrivateRoute>,
             loader: () => fetch('../data.json')
         }, 
         {
             path: "/ourTeam",
             element: <OurTeam></OurTeam>
+        }, 
+        {
+            path: "/blog",
+            element: <PrivateRouter2>
+                    <Blog></Blog>
+            </PrivateRouter2>      
+        }, 
+        {
+            path: "/techNews",
+            element: <PrivateRouter2>
+                <TechNews></TechNews>
+            </PrivateRouter2>
         }
       ]
     },
