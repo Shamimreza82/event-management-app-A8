@@ -29,7 +29,7 @@ const Service = ({ card }) => {
         </p>
       </div>
       <div className="p-6 pt-0 flex justify-center items-center">
-      <Link to={`/serviceDetailes/${id}`} className="btn bg-[#91c733] border-none py-1 text-white"> details</Link>
+      <Link to={`/serviceDetailes/${id}`} className="btn bg-[#91c733] border-none py-1 text-white hover:text-[#91c733]"> details</Link>
       </div>
     </div>
     </>

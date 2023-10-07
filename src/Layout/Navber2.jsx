@@ -38,8 +38,8 @@ const Navber2 = () => {
               isPending
                 ? "pending"
                 : isActive
-                ? "text-[#91c733]  "
-                : "text-green-50 hover:outline  hover:rounded-md "
+                ? "text-[#91c733]   "
+                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
             }
           >
             Home
@@ -51,7 +51,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733] "
-                : "text-green-50 hover:outline hover:rounded-md "
+                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md"
             }
           >
             Services
@@ -63,7 +63,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733] "
-                : "text-green-50 hover:outline  hover:rounded-md  "
+                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
             }
           >
             About Us
@@ -75,7 +75,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733] "
-                : "text-green-50 hover:outline  hover:rounded-md  "
+                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md  "
             }
           >
             Our Team
@@ -88,7 +88,7 @@ const Navber2 = () => {
                   ? "pending"
                   : isActive
                   ? "text-[#91c733] "
-                  : "text-green-50 hover:outline  hover:rounded-md  "
+                  : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
               }
             >
               Blog
@@ -103,7 +103,7 @@ const Navber2 = () => {
                   ? "pending"
                   : isActive
                   ? "text-[#91c733] "
-                  : "text-green-50 hover:outline  hover:rounded-md  "
+                  : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
               }
             >
               Tech News
