@@ -637,7 +637,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Contact></Contact>
+      
     </div>
   );
 };
