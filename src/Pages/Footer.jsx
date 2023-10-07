@@ -3,11 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-[#91c733]  text-black-content ">
+      <footer className="footer footer-center p-10 bg-[#91c733]  text-gray-800">
         <aside data-aos="fade-left">
          <h1 className="text-2xl font-bold">Tech Conferences and Expos</h1>
           <p className="font-bold">
-            ACME Industries Ltd. <br />
+         
             Providing reliable tech since 1992
           </p>
           <p>Copyright © 2023 - All right reserved</p>

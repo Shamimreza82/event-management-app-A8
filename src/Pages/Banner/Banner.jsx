@@ -22,13 +22,11 @@ const Banner = () => {
             <div>
               <h1
                 className="mb-5 lg:text-5xl text-4xl font-bold text-white"
-                data-aos="fade-top"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
+                data-aos="zoom-in"
               >
                 Tech Conferences and Expos
               </h1>
-              <h1 className="mb-5 text-3xl font-bold text-white">
+              <h1 className="mb-5 text-3xl font-bold text-white" data-aos="zoom-in-right">
                 Event Management and Planning
               </h1>
               <p className="mb-5 max-w-md m-auto">
@@ -38,7 +36,7 @@ const Banner = () => {
               <Link
                 to="/ourTeam"
                 className="btn bg-[#91c733] border-none py-1 hover:text-green-700"
-              >
+                data-aos="zoom-in">
                 
                 Meet Our Team
               </Link>

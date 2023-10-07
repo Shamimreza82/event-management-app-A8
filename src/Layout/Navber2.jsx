@@ -4,21 +4,21 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navber2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const {user, logOut} = useContext(AuthContext)
-  const navigate = useNavigate()
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   console.log(user);
 
   const handleLogout = () => {
     logOut()
-    .then(()=> {
-      navigate('/')
-    })
-    .catch(error => console.error(error))
-  }
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => console.error(error));
+  };
 
   return (
-    <div className="py-4 bg-slate-900 lg:px-6 font-roboto">
+    <div className="py-4 bg-slate-900 lg:px-6 px-3 font-roboto">
       <div className="relative flex items-center justify-between">
         <a
           href="/"
@@ -35,7 +35,11 @@ const Navber2 = () => {
           <NavLink
             to="/"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733]  " : "text-green-50 hover:outline  hover:rounded-md "
+              isPending
+                ? "pending"
+                : isActive
+                ? "text-[#91c733]  "
+                : "text-green-50 hover:outline  hover:rounded-md "
             }
           >
             Home
@@ -43,7 +47,11 @@ const Navber2 = () => {
           <NavLink
             to="/services"
             className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline hover:rounded-md "
+              isPending
+                ? "pending"
+                : isActive
+                ? "text-[#91c733] "
+                : "text-green-50 hover:outline hover:rounded-md "
             }
           >
             Services
@@ -51,7 +59,11 @@ const Navber2 = () => {
           <NavLink
             to="/about"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
+              isPending
+                ? "pending"
+                : isActive
+                ? "text-[#91c733] "
+                : "text-green-50 hover:outline  hover:rounded-md  "
             }
           >
             About Us
@@ -59,42 +71,70 @@ const Navber2 = () => {
           <NavLink
             to="/ourTeam"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
+              isPending
+                ? "pending"
+                : isActive
+                ? "text-[#91c733] "
+                : "text-green-50 hover:outline  hover:rounded-md  "
             }
           >
             Our Team
           </NavLink>
-          {
-            user && <NavLink
-            to="/blog"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
-            }
-          >
-            Blog
-          </NavLink>
-          }
-          
-          {
-            user && <NavLink
-            to="/techNews"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#91c733] " : "text-green-50 hover:outline  hover:rounded-md  "
-            }
-          >
-            Tech News
-          </NavLink>
-          }
-          {
-            user ? <div className="flex gap-2 items-center">
-            <img className="rounded-full h-[45px] border-2 border-[#91c733]" src={user.photoURL} alt="" />
-            <Link onClick={handleLogout} to='/login' className="btn bg-[#91c733] border-none py-1 hover:text-green-700"> Logout</Link>
-            </div> : 
-            <Link to='/login' className="btn bg-[#91c733] border-none py-1 hover:text-green-700"> Login</Link> 
-          }
-          
-        </ul>
+          {user && (
+            <NavLink
+              to="/blog"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-[#91c733] "
+                  : "text-green-50 hover:outline  hover:rounded-md  "
+              }
+            >
+              Blog
+            </NavLink>
+          )}
 
+          {user && (
+            <NavLink
+              to="/techNews"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-[#91c733] "
+                  : "text-green-50 hover:outline  hover:rounded-md  "
+              }
+            >
+              Tech News
+            </NavLink>
+          )}
+          {user ? (
+            <div className="flex gap-2 items-center">
+              <img
+                className="rounded-full h-[45px] border-2 border-[#91c733]"
+                src={user.photoURL}
+                alt=""
+              />
+              <Link
+                onClick={handleLogout}
+                to="/login"
+                className="btn bg-[#91c733] border-none py-1 hover:text-green-700"
+              >
+                {" "}
+                Logout
+              </Link>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="btn bg-[#91c733] border-none py-1 hover:text-green-700"
+            >
+              {" "}
+              Login
+            </Link>
+          )}
+        </ul>
 
         {/* mobile view -------------------------------------------------------------- */}
 
@@ -132,7 +172,7 @@ const Navber2 = () => {
                       className="inline-flex items-center"
                     >
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                      Tech Conferences and Expos
+                        Tech Conferences and Expos
                       </span>
                     </a>
                   </div>
@@ -156,7 +196,7 @@ const Navber2 = () => {
                   <ul className="space-y-4">
                     <li>
                       <Link
-                        to='/'
+                        to="/"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -166,7 +206,7 @@ const Navber2 = () => {
                     </li>
                     <li>
                       <Link
-                        to='/services'
+                        to="/services"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
@@ -185,18 +225,78 @@ const Navber2 = () => {
                       </a>
                     </li>
                     <li>
-                      <Link
-                        to="/login"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 btn"
+                      <a
+                        href="/ourTeam"
+                        aria-label="Product pricing"
+                        title="Product pricing"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Login
-                      </Link>
+                        Our Team
+                      </a>
                     </li>
+                
+                      <li>
+                      {user && (
+                        <NavLink
+                          to="/blog"
+                          className={({ isActive, isPending }) =>
+                            isPending
+                              ? "pending"
+                              : isActive
+                              ? "text-[#91c733] "
+                              : "text-green-50 hover:outline  hover:rounded-md  "
+                          }
+                        >
+                          Blog
+                        </NavLink>
+                      )}
+                      </li>
+
+                      <li>
+                      {user && (
+                        <NavLink
+                          to="/techNews"
+                          className={({ isActive, isPending }) =>
+                            isPending
+                              ? "pending"
+                              : isActive
+                              ? "text-[#91c733] "
+                              : "text-green-50 hover:outline  hover:rounded-md  "
+                          }
+                        >
+                          Tech News
+                        </NavLink>
+                      )}
+                      </li>
+                      {user ? (
+                        <div className="flex gap-2 items-center">
+                          <img
+                            className="rounded-full h-[45px] border-2 border-bg-green-50"
+                            src={user.photoURL}
+                            alt=""
+                          />
+                          <Link
+                            onClick={handleLogout}
+                            to="/login"
+                            className="btn bg-green-50 border-none py-1 hover:text-green-700"
+                          >
+                            {" "}
+                            Logout
+                          </Link>
+                        </div>
+                      ) : (
+                        <Link
+                          to="/login"
+                          className="btn bg-green-50 border-none py-1 hover:text-green-700"
+                        >
+                          {" "}
+                          Login
+                        </Link>
+                      )}
+                  
                     <li>
                       <Link
-                        to='/register'
+                        to="/register"
                         className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none border "
                         aria-label="Sign up"
                         title="Sign up"

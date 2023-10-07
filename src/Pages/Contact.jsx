@@ -5,7 +5,8 @@ const Contact = () => {
     <div className="font-roboto min-h-[70vh] lg:mb-10 mb-3">
         
       <section className=" dark:text-black">
-      <h1 className='text-center text-2xl lg:text-3xl font-bold flex justify-center pb-5' data-aos="zoom-out-down">Contact US</h1>
+      <h1 className='text-center text-2xl lg:text-3xl font-bold flex justify-center ' data-aos="zoom-out-down">Contact US</h1>
+      <hr className=" w-[10%] border-[#91c733] border-2 m-auto mb-4 " />
         <div className="grid max-w-7xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x lg:py-5">
           <div className="py-6 md:py-0 md:px-6" data-aos="zoom-out-right"> 
             <h1 className="text-4xl font-bold">Get in touch</h1>

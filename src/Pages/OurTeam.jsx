@@ -8,10 +8,12 @@ const OurTeam = () => {
   return (
     <section className="text-gray-600 body-font font-roboto mt-5 max-w-7xl m-auto">
       <div className="container px-5 py-5 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
+      <h1 className="text-3xl flex justify-center font-bold text-gray-900 text-center " data-aos="zoom-in">
             OUR TEAM
           </h1>
+          <hr className=" w-[10%] border-[#91c733] border-2 m-auto mb-4 "  data-aos="zoom-in"/>
+        <div className="flex flex-col text-center  w-full mb-20">
+          
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
           The Event Manager is the driving force behind your tech conference or expo. Serving as the chief strategist and coordinator, they meticulously plan, budget, and oversee every aspect of the event's execution. With an unwavering commitment to your success, they are the main point of contact for clients, ensuring that all elements come together seamlessly, resulting in a remarkable and unforgettable event.
           </p>
