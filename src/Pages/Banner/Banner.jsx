@@ -19,9 +19,9 @@ const Banner = () => {
         >
           <div className="hero-overlay bg-opacity-70 brightness-0 "></div>
           <div className="hero-content text-center text-neutral-content">
-            <div>
+            <div className="hover:scale-105 hover:duration-500 duration-500">
               <h1
-                className="mb-5 lg:text-5xl text-4xl font-bold text-white"
+                className="mb-5 lg:text-5xl text-4xl font-bold text-white  "
                 data-aos="zoom-in"
               >
                 Tech Conferences and Expos

@@ -39,7 +39,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733]   "
-                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
+                : "text-green-50 hover:scale-125 hover:duration-300 duration-300 hover:rounded-md "
             }
           >
             Home
@@ -51,7 +51,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733] "
-                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md"
+                : "text-green-50 hover:scale-125 hover:duration-300 duration-300 hover:rounded-md"
             }
           >
             Services
@@ -63,7 +63,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733] "
-                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
+                : "text-green-50 hover:scale-125 hover:duration-300 duration-300 hover:rounded-md"
             }
           >
             About Us
@@ -75,7 +75,7 @@ const Navber2 = () => {
                 ? "pending"
                 : isActive
                 ? "text-[#91c733] "
-                : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md  "
+                : "text-green-50 hover:scale-125 hover:duration-300 duration-300 hover:rounded-md"
             }
           >
             Our Team
@@ -88,7 +88,7 @@ const Navber2 = () => {
                   ? "pending"
                   : isActive
                   ? "text-[#91c733] "
-                  : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
+                  : "text-green-50 hover:scale-125 hover:duration-300 duration-300 hover:rounded-md"
               }
             >
               Blog
@@ -103,7 +103,7 @@ const Navber2 = () => {
                   ? "pending"
                   : isActive
                   ? "text-[#91c733] "
-                  : "text-green-50 hover:scale-125 hover:duration-200 hover:rounded-md "
+                  : "text-green-50 hover:scale-125 hover:duration-300 duration-300 hover:rounded-md"
               }
             >
               Tech News
@@ -162,7 +162,7 @@ const Navber2 = () => {
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full z-20">
-              <div className="p-5 bg-[#91c733] border rounded shadow-sm">
+              <div className="p-5 bg-[#91c733] border rounded shadow-sm ">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <a
@@ -199,7 +199,7 @@ const Navber2 = () => {
                         to="/"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded"
                       >
                         Home
                       </Link>
@@ -209,7 +209,7 @@ const Navber2 = () => {
                         to="/services"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded "
                       >
                         Services
                       </Link>
@@ -219,7 +219,7 @@ const Navber2 = () => {
                         href="/about"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded"
                       >
                         About Us
                       </a>
@@ -229,7 +229,7 @@ const Navber2 = () => {
                         href="/ourTeam"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded "
                       >
                         Our Team
                       </a>
@@ -244,7 +244,7 @@ const Navber2 = () => {
                               ? "pending"
                               : isActive
                               ? "text-[#91c733] "
-                              : "text-green-50 hover:outline  hover:rounded-md  "
+                              : "text-black bg-slate-100 p-1 rounded hover:outline  hover:rounded-md  "
                           }
                         >
                           Blog
@@ -261,7 +261,7 @@ const Navber2 = () => {
                               ? "pending"
                               : isActive
                               ? "text-[#91c733] "
-                              : "text-green-50 hover:outline  hover:rounded-md  "
+                              : "text-black bg-slate-100 p-1 rounded hover:outline  hover:rounded-md  "
                           }
                         >
                           Tech News

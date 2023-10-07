@@ -12,7 +12,7 @@ const Service = ({ card }) => {
       <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
         <img
           src={image}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover hover:scale-105 hover:duration-300"
         />
       </div>
       <div className="p-6">

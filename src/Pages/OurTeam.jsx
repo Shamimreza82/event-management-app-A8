@@ -8,7 +8,7 @@ const OurTeam = () => {
   return (
     <section className="text-gray-600 body-font font-roboto mt-5 max-w-7xl m-auto">
       <div className="container px-5 py-5 mx-auto">
-      <h1 className="text-3xl flex justify-center font-bold text-gray-900 text-center " data-aos="zoom-in">
+      <h1 className="text-3xl flex justify-center font-bold text-gray-900 text-center  " data-aos="zoom-in">
             OUR TEAM
           </h1>
           <hr className=" w-[10%] border-[#91c733] border-2 m-auto mb-4 "  data-aos="zoom-in"/>
@@ -23,7 +23,7 @@ const OurTeam = () => {
             <div className=" hover:bg-slate-100 hover:rounded-md h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left" data-aos="zoom-out">
               <img
                 alt="team"
-                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 hover:scale-105 hover:duration-300"
                 src={img1}
               />
               <div className="flex-grow sm:pl-8">
@@ -82,7 +82,7 @@ const OurTeam = () => {
             <div className=" hover:bg-slate-100 hover:rounded-md h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"data-aos="zoom-in" >
               <img
                 alt="team"
-                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 hover:scale-105 hover:duration-300"
                 src={img2}
               />
               <div className="flex-grow sm:pl-8">
@@ -141,7 +141,7 @@ const OurTeam = () => {
             <div className=" hover:bg-slate-100 hover:rounded-md h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left" data-aos="zoom-in">
               <img
                 alt="team"
-                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 hover:scale-105 hover:duration-300"
                 src={img3}
               />
               <div className="flex-grow sm:pl-8">
@@ -200,7 +200,7 @@ const OurTeam = () => {
             <div className=" hover:bg-slate-100 hover:rounded-md h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left" data-aos="zoom-out">
               <img
                 alt="team"
-                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 hover:scale-105 hover:duration-300"
                 src={img4}
               />
               <div className="flex-grow sm:pl-8">
