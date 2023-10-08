@@ -170,8 +170,8 @@ const Navber2 = () => {
             <div className="absolute top-0 left-0 w-full z-20">
               <div className="p-5 bg-[#91c733] border rounded shadow-sm ">
                 <div className="flex items-center justify-between mb-4">
-                  <div>
-                
+                  <div className="items-center">
+                    <img className="rounded-full w-[40px]" src={logo} alt="" />
                     <a
                       href="/"
                       aria-label="Company"
@@ -199,7 +199,7 @@ const Navber2 = () => {
                     </button>
                   </div>
                 </div>
-                <nav>
+                <nav className="">
                   <ul className="space-y-4">
                     <li>
                       <Link
@@ -244,7 +244,7 @@ const Navber2 = () => {
                 
                       <li>
                       {user && (
-                        <NavLink
+                        <Link
                           to="/blog"
                           className={({ isActive, isPending }) =>
                             isPending
@@ -255,13 +255,13 @@ const Navber2 = () => {
                           }
                         >
                           Blog
-                        </NavLink>
+                        </Link>
                       )}
                       </li>
 
                       <li>
                       {user && (
-                        <NavLink
+                        <Link
                           to="/techNews"
                           className={({ isActive, isPending }) =>
                             isPending
@@ -272,7 +272,7 @@ const Navber2 = () => {
                           }
                         >
                           Tech News
-                        </NavLink>
+                        </Link>
                       )}
                       </li>
                       {user ? (

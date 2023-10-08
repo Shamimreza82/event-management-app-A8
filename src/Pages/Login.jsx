@@ -22,7 +22,7 @@ const Login = () => {
     if(password.length < 6){
         setError('Password must be at least 6 characters long') 
       } else if(!/[!@#\$%\^&\*_]/.test(password)){
-        setError('"Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]"')
+       setError('"Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]"')
       } else if(!/[A-Z]/.test(password)){
         setError('"Your password must contain at least one uppercase letter"')
       } 
@@ -37,7 +37,7 @@ const Login = () => {
     })
     .catch(error => {
       console.error(error)
-      swal("Oops...", "Please provide valid Email and password", "error"); 
+      swal("Oops...", "Please provide valid Email and password", "error");
     } )
    }
 
