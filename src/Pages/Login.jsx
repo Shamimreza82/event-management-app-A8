@@ -25,11 +25,12 @@ const Login = () => {
        setError('"Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]"')
       } else if(!/[A-Z]/.test(password)){
         setError('"Your password must contain at least one uppercase letter"')
+        return
       } 
 
 
 
-    loginUser(email, password)
+    loginUser(email, password) 
     .then(result => {
       console.log(result.user);
       navigate(location?.state ? location.state : '/')
@@ -38,6 +39,7 @@ const Login = () => {
     .catch(error => {
       console.error(error)
       swal("Oops...", "Please provide valid Email and password", "error");
+    
     } )
    }
 
@@ -70,7 +72,7 @@ const Login = () => {
                     </svg>
                 </span>
 
-                <input type="email" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-11 dark:bg-gray-100  dark:border-[#91c733] focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" name="email"/>
+                <input type="email" className="block w-full py-3 text-gray-900 bg-white border rounded-lg px-11 dark:bg-gray-100  dark:border-[#91c733] focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" name="email" required/>
             </div>
 
             <div className="relative flex items-center mt-4">
@@ -80,7 +82,7 @@ const Login = () => {
                     </svg>
                 </span>
 
-                <input type="password" className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-100  dark:border-[#91c733] focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" name="password"/>
+                <input type="password" className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-100  dark:border-[#91c733] focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" name="password" required/>
             </div>
             <p className="mt-3 text-red-600 font-roboto font-bold">{error}</p>
             <button className=" mt-6 w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#91c733] rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" type="submit">

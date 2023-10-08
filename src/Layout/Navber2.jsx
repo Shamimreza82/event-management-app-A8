@@ -168,20 +168,20 @@ const Navber2 = () => {
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full z-20">
-              <div className="p-5 bg-[#91c733] border rounded shadow-sm ">
+              <div className="p-5 bg-slate-800 border rounded shadow-sm "  data-aos="zoom-in">
                 <div className="flex items-center justify-between mb-4">
                   <div className="items-center">
                     <img className="rounded-full w-[40px]" src={logo} alt="" />
-                    <a
-                      href="/"
+                    <Link
+                      to="/"
                       aria-label="Company"
                       title="Company"
                       className="inline-flex items-center"
                     >
-                      <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                      <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
                         Tech Conferences and Expos
                       </span>
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <button
@@ -200,116 +200,104 @@ const Navber2 = () => {
                   </div>
                 </div>
                 <nav className="">
-                  <ul className="space-y-4">
-                    <li>
-                      <Link
-                        to="/"
+                  <ul className="space-y-6 text-center ">
+                      <a
+                      href="/"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded"
+                        className="font-medium tracking-wide text-white px-10 py-2 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-[#91c733] p-1 rounded block"
                       >
                         Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/services"
+                      </a>
+                      <a
+                        href="/services"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded "
+                        className="font-medium tracking-wide text-white px-10 py-2  transition-colors duration-200 hover:text-deep-purple-accent-400 bg-[#91c733] p-1 rounded block "
                       >
                         Services
-                      </Link>
-                    </li>
-                    <li>
+                      </a>
+
                       <a
                         href="/about"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded"
+                        className="font-medium tracking-wide text-white  px-10 py-2  transition-colors duration-200 hover:text-deep-purple-accent-400 bg-[#91c733] p-1 rounded block"
                       >
                         About Us
                       </a>
-                    </li>
-                    <li>
                       <a
                         href="/ourTeam"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 bg-slate-100 p-1 rounded "
+                        className="font-medium tracking-wide text-white px-10 py-2  transition-colors duration-200 hover:text-deep-purple-accent-400 bg-[#91c733] p-1 rounded block "
                       >
                         Our Team
                       </a>
-                    </li>
-                
-                      <li>
+                    
+                      <div>
                       {user && (
-                        <Link
-                          to="/blog"
-                          className={({ isActive, isPending }) =>
-                            isPending
-                              ? "pending"
-                              : isActive
-                              ? "text-[#91c733] "
-                              : "text-black bg-slate-100 p-1 rounded hover:outline  hover:rounded-md  "
-                          }
-                        >
-                          Blog
-                        </Link>
+                        <a
+                        href="/ourTeam"
+                        aria-label="Product pricing"
+                        title="Product pricing"
+                        className="font-medium tracking-wide text-white px-10 py-2  transition-colors duration-200 hover:text-deep-purple-accent-400 bg-[#91c733] p-1 rounded block "
+                      >
+                        Blog
+                      </a>
                       )}
-                      </li>
+                      </div>
+                      
 
-                      <li>
                       {user && (
-                        <Link
-                          to="/techNews"
-                          className={({ isActive, isPending }) =>
-                            isPending
-                              ? "pending"
-                              : isActive
-                              ? "text-[#91c733] "
-                              : "text-black bg-slate-100 p-1 rounded hover:outline  hover:rounded-md  "
-                          }
-                        >
-                          Tech News
-                        </Link>
+                        <a
+                        href="/techNews"
+                        aria-label="Product pricing"
+                        title="Product pricing"
+                        className="font-medium tracking-wide text-white px-10 py-2  transition-colors duration-200 hover:text-deep-purple-accent-400 bg-[#91c733] p-1 rounded block "
+                      >
+                        Tech News
+                      </a>
                       )}
-                      </li>
+
                       {user ? (
-                        <div className="flex gap-2 items-center">
+                        <div className="flex gap-20 justify-between items-center">
+                          <div className=" flex items-center space-x-2 border p-2 rounded-full">
                           <img
-                            className="rounded-full h-[45px] border-2 border-bg-green-50"
+                            className="rounded-full h-[45px] border-2 border-bg-green-50 m-auto"
                             src={user.photoURL}
                             alt=""
                           />
-                          <Link
+                          <p className="text-base font-bold text-[#91c733]">{user.displayName}</p>
+                          </div>
+                          <a
                             onClick={handleLogout}
-                            to="/login"
-                            className="btn bg-green-50 border-none py-1 hover:text-green-700"
+                            href="/login"
+                            className="btn bg-red-600 border-none text-white "
                           >
                             {" "}
                             Logout
-                          </Link>
+                          </a>
                         </div>
                       ) : (
-                        <Link
-                          to="/login"
-                          className="btn bg-green-50 border-none py-1 hover:text-green-700"
+                        <a
+                        href="/login"
+                          className="btn w-full"
                         >
                           {" "}
                           Login
-                        </Link>
+                        </a>
                       )}
                   
                     <li>
-                      <Link
-                        to="/register"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none border "
+                      <a
+                        href="/register"
+                        className="btn w-full bg-slate-950 text-white"
                         aria-label="Sign up"
                         title="Sign up"
                       >
                         Sign up
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </nav>

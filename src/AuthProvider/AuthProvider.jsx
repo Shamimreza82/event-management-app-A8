@@ -44,10 +44,13 @@ const AuthProvider = ({children}) => {
 
     // osjerving user 
     useEffect (()=> {
-        onAuthStateChanged(auth, currentUser => {
+       const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
             setLoading(false)
         })
+        return () => {
+            unSubscribe()
+        } 
     }, [])
 
 
