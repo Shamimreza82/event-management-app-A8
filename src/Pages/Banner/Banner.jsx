@@ -20,13 +20,13 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-70 brightness-0 "></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="hover:scale-105 hover:duration-500 duration-500">
-              <h1
+              {/* <h1
                 className="mb-5 lg:text-5xl text-4xl font-bold text-white  "
                 data-aos="zoom-in"
               >
                 Tech Conferences and Expos
-              </h1>
-              <h1 className="mb-5 text-3xl font-bold text-white" data-aos="zoom-in-right">
+              </h1> */}
+              <h1 className="mb-5 lg:text-5xl text-2xl font-bold text-white" data-aos="zoom-in-down">
                 Event Management and Planning
               </h1>
               <p className="mb-5 max-w-md m-auto">
@@ -35,7 +35,7 @@ const Banner = () => {
               </p>
               <Link
                 to="/ourTeam"
-                className="btn bg-[#91c733] border-none py-1 hover:text-green-700"
+                className="btn bg-[#91c733] border-none py-1 hover:text-[#91c733] hover:bg-slate-900"
                 data-aos="zoom-in">
                 
                 Meet Our Team
@@ -56,7 +56,7 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-70 brightness-0 "></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold text-white" >
+              <h1 className="mb-5 lg:text-5xl text-2xl font-bold text-white" >
                 Venue and Space Management
               </h1>
               <p className="mb-5">
@@ -86,7 +86,7 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-70 brightness-0 "></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold text-white">
+              <h1 className="mb-5 lg:text-5xl text-2xl font-bold text-white">
                 Registration and Badge Services
               </h1>
               <p className="mb-5">
@@ -116,7 +116,7 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-70 brightness-0 "></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold text-white">Exhibitor Services</h1>
+              <h1 className="mb-5 lg:text-5xl text-2xl font-bold text-white">Exhibitor Services</h1>
               <p className="mb-5">
               Our Exhibitor Services are designed to empower your exhibitors with effective booth design and lead retrieval systems. 
               </p>

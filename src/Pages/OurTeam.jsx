@@ -3,12 +3,16 @@ import img1 from '../assets/img (1).jpg'
 import img2 from '../assets/img (2).jpg'
 import img3 from '../assets/img (3).jpg'
 import img4 from '../assets/img (4).jpg'
+import { Helmet } from "react-helmet";
 
 const OurTeam = () => {
   return (
     <section className="text-gray-600 body-font font-roboto mt-5 max-w-7xl m-auto">
+      <Helmet>
+            <title>Tech Conferences and Expos | Our Team</title>
+         </Helmet>
       <div className="container px-5 py-5 mx-auto">
-      <h1 className="text-3xl flex justify-center font-bold text-gray-900 text-center  " data-aos="zoom-in">
+      <h1 className="text-3xl flex justify-center font-bold text-slate-900 text-center  " data-aos="zoom-in">
             OUR TEAM
           </h1>
           <hr className=" w-[10%] border-[#91c733] border-2 m-auto mb-4 "  data-aos="zoom-in"/>

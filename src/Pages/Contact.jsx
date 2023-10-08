@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -8,7 +9,7 @@ const Contact = () => {
       <h1 className='text-center text-2xl lg:text-3xl font-bold flex justify-center ' data-aos="zoom-out-down">Contact US</h1>
       <hr className=" w-[10%] border-[#91c733] border-2 m-auto mb-4 " />
         <div className="grid max-w-7xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x lg:py-5">
-          <div className="py-6 md:py-0 md:px-6" data-aos="zoom-out-right"> 
+          <div className="py-6 md:py-0 md:px-6" data-aos="zoom-in-down"> 
             <h1 className="text-4xl font-bold">Get in touch</h1>
             <p className="pt-2 pb-4">
               Fill in the form to start a conversation
@@ -57,7 +58,7 @@ const Contact = () => {
           <form
             novalidate=""
             className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-            data-aos="zoom-out-left">
+            data-aos="zoom-in-down">
             <label className="block">
               <span className="mb-1">Full name</span>
               <input
@@ -81,12 +82,7 @@ const Contact = () => {
                 className="block w-full rounded-md focus:ring focus:ri focus:ri py-2 pl-2 "
               ></textarea>
             </label>
-            <button
-              type="button"
-              className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri dark:bg-violet-400 dark:text-gray-900 focus:ri hover:ri"
-            >
-              Submit
-            </button>
+            <Link className="btn bg-[#91c733] hover:text-slate-900 border-none py-1 text-white"> Submit </Link>
           </form>
         </div>
       </section>

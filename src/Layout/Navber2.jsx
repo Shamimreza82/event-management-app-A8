@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import logo from '../assets/logo.jpg'
 
 const Navber2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,9 @@ const Navber2 = () => {
   };
 
   return (
-    <div className="py-4 bg-slate-900 lg:px-6 px-3 font-roboto">
+    <div className="py-4 bg-slate-900 lg:px-6 px-3 font-roboto ">
       <div className="relative flex items-center justify-between">
+        
         <a
           href="/"
           aria-label="Company"
@@ -27,7 +29,8 @@ const Navber2 = () => {
           className="inline-flex items-center"
           data-aos="fade-right"
         >
-          <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
+          <img className="rounded-full w-[50px]" src={logo} alt="" />
+          <span className="ml-2 text-base lg:text-xl font-bold tracking-wide text-white uppercase">
             Tech Conferences and Expos
           </span>
         </a>
@@ -111,11 +114,14 @@ const Navber2 = () => {
           )}
           {user ? (
             <div className="flex gap-2 items-center">
+              <div className="text-center">
               <img
-                className="rounded-full h-[45px] border-2 border-[#91c733]"
+                className="rounded-full h-[40px] border-2 border-[#91c733] ml-6"
                 src={user.photoURL}
                 alt=""
               />
+              <p className="text-sm font-bold text-[#91c733]">{user.displayName}</p>
+              </div>
               <Link
                 onClick={handleLogout}
                 to="/login"
@@ -165,6 +171,7 @@ const Navber2 = () => {
               <div className="p-5 bg-[#91c733] border rounded shadow-sm ">
                 <div className="flex items-center justify-between mb-4">
                   <div>
+                
                     <a
                       href="/"
                       aria-label="Company"

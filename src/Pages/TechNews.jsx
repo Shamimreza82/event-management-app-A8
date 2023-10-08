@@ -1,11 +1,14 @@
-import React from "react";
 import img1 from '../assets/a.jpg'
 import img2 from '../assets/b.jpg'
 import img3 from '../assets/c.jpg'
+import { Helmet } from "react-helmet";
 
 const TechNews = () => {
   return (
     <section className="bg-white text-black px-3 ">
+      <Helmet>
+            <title>Tech Conferences and Expos | Tech News</title>
+         </Helmet>
       <div className="mx-auto lg:py-8 py-3 lg:w-[70%] m-auto text-black flex justify-center items-center " data-aos="fade-down">
         <div >
         <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-5xl ">

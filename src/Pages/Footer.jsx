@@ -1,10 +1,11 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-[#91c733]  text-gray-800">
-        <aside data-aos="fade-left">
+      <footer className="footer footer-center p-10 bg-slate-900  text-gray-300">
+        <aside data-aos="zoom-in">
          <h1 className="text-2xl font-bold">Tech Conferences and Expos</h1>
           <p className="font-bold">
          

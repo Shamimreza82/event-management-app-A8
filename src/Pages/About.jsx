@@ -4,28 +4,32 @@ import bg1 from '../assets/Audiovisual and Technology Support.jpg'
 import bg2 from '../assets/Registration and Badge Services.jpg'
 import bg3 from '../assets/Event Management and Planning.jpg'
 import Contact from "./Contact";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   const data = useLoaderData();
   console.log(data);
   return (
     <div className="max-w-7xl m-auto">
+        <Helmet>
+            <title>Tech Conferences and Expos | About Us</title>
+         </Helmet>
       <section className="overflow-hidden pb-12 px-3">
       <h1 className='text-center text-2xl lg:text-3xl font-bold lg:pt-10 flex justify-center' data-aos="zoom-out-down">About US</h1>
       <hr className=" w-[10%] border-[#91c733] border-2 m-auto mb-4 " />
         <div className="container mx-auto " >
           <div className="-mx-4 flex flex-wrap items-center justify-between">
             <div className="w-full px-4 lg:w-6/12">
-              <div className="-mx-3 flex items-center sm:-mx-4">
+              <div className="-mx-3 flex flex-col md:flex-row items-center sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                  <div className="py-3 sm:py-4" data-aos="fade-right">
+                  <div className="py-3 sm:py-4" data-aos="zoom-in-down">
                     <img
                       src={bg1}
                       alt=""
                       className="w-full rounded-2xl lg:h-[250px]"
                     />
                   </div>
-                  <div className="py-3 sm:py-4" data-aos="fade-right">
+                  <div className="py-3 sm:py-4" data-aos="zoom-in-down">
                     <img
                       src={bg2}
                       alt=""
@@ -34,7 +38,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                  <div className="relative z-10 my-4" data-aos="fade-left">
+                  <div className="relative z-10 my-4" data-aos="zoom-in-down">
                     <img
                       src={bg3}
                       alt=""
@@ -632,7 +636,7 @@ const About = () => {
                 <p className="text-body-color mb-12 text-base">
                 <strong>Customized Solutions:</strong> Recognizing that no two tech events are identical, we work closely with you to tailor every facet of your conference or expo, from content curation to logistical precision, aligning every detail with your unique goals.
                 </p>
-                <Link to='/login' className="btn bg-[#91c733] border-none py-1 text-white"> More </Link>
+              
               </div>
             </div>
           </div>
