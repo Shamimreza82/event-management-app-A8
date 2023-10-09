@@ -37,7 +37,7 @@ const Register = () => {
         })
         .catch(error =>{
           console.error(error)
-          setError("Email Already used")
+         
         })
        }
 

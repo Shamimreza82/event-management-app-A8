@@ -31,7 +31,7 @@ const Navber2 = () => {
         >
           <img className="rounded-full w-[50px]" src={logo} alt="" />
           <span className="ml-2 text-base lg:text-xl font-bold tracking-wide text-white uppercase">
-            Tech Conferences and Expos
+          Tech Unite Events
           </span>
         </a>
         <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -179,7 +179,7 @@ const Navber2 = () => {
                       className="inline-flex items-center"
                     >
                       <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
-                        Tech Conferences and Expos
+                      Tech Unite Events
                       </span>
                     </Link>
                   </div>

@@ -8,4 +8,6 @@
 * Google authentication is used for login. 
 
 
+Site Name: Tech Unite Events
+
 Live LInk: https://event-management-a08f5.web.app 

@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <footer className="footer footer-center p-10 bg-slate-900  text-gray-300">
         <aside data-aos="zoom-in">
-         <h1 className="text-2xl font-bold">Tech Conferences and Expos</h1>
+         <h1 className="text-2xl font-bold">Tech Unite Events</h1>
           <p className="font-bold">
          
             Providing reliable tech since 1992
