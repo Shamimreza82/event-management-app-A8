@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="max-w-7xl m-auto">
         <Helmet>
-            <title>Tech Conferences and Expos | About Us</title>
+            <title>Tech Unite Events | About Us</title>
          </Helmet>
       <section className="overflow-hidden pb-12 px-3">
       <h1 className='text-center text-2xl lg:text-3xl font-bold lg:pt-10 flex justify-center' data-aos="zoom-out-down">About US</h1>

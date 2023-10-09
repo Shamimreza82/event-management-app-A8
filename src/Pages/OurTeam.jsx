@@ -9,7 +9,7 @@ const OurTeam = () => {
   return (
     <section className="text-gray-600 body-font font-roboto mt-5 max-w-7xl m-auto">
       <Helmet>
-            <title>Tech Conferences and Expos | Our Team</title>
+            <title>Tech Unite Events | Our Team</title>
          </Helmet>
       <div className="container px-5 py-5 mx-auto">
       <h1 className="text-3xl flex justify-center font-bold text-slate-900 text-center  " data-aos="zoom-in">

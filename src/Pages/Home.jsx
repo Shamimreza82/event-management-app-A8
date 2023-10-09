@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div >
             <Helmet>
-                    <title>Tech Conferences and Expos | Home</title>
+                    <title>Tech Unite Events | Home</title>
             </Helmet>
             
             {/* <div style={{backgroundImage: `url(https://i.ibb.co/PCY2V0S/Event-Management-and-Planning.jpg)`, 

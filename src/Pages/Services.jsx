@@ -11,7 +11,7 @@ const Services = () => {
     return (
         <div className='max-w-7xl mx-auto lg:mb-8 mb-3'>
             <Helmet>
-                    <title>Tech Conferences and Expos | Services</title>
+                    <title>Tech Unite Events | Services</title>
             </Helmet>
             <div className='min-h-screen'>
                 <h1 className='text-center text-slate-900 text-2xl lg:text-3xl font-bold lg:pt-10 flex justify-center' data-aos="zoom-in-down">Our Services</h1>

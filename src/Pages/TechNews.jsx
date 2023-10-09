@@ -7,7 +7,7 @@ const TechNews = () => {
   return (
     <section className="bg-white text-black px-3 ">
       <Helmet>
-            <title>Tech Conferences and Expos | Tech News</title>
+            <title>Tech Unite Events | Tech News</title>
          </Helmet>
       <div className="mx-auto lg:py-8 py-3 lg:w-[70%] m-auto text-black flex justify-center items-center " data-aos="fade-down">
         <div >

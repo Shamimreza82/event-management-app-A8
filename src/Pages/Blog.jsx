@@ -9,7 +9,7 @@ const Blog = () => {
     return (
         <section className=" dark:text-gray-100">
 			<Helmet>
-            <title>Tech Conferences and Expos | Blog</title>
+            <title>Tech Unite Events | Blog</title>
          </Helmet>
 	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 rounded-md">
 		<a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-200 shadow-md">
