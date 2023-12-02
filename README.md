@@ -1,6 +1,8 @@
 
 ## Some important features of the site. 
 
+Live LInk: https://event-management-a08f5.web.app 
+
 * The site is very well responsive which will add a unique dimension to the user.
 * This site has added login and registration(Password validation feature has been added here) features which are managed through Firebase.
 * The site has a total of three private routes is Blog, Tech News and service details. 
@@ -10,4 +12,3 @@
 
 Site Name: Tech Unite Events
 
-Live LInk: https://event-management-a08f5.web.app 
